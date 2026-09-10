@@ -1,0 +1,130 @@
+.notice-grid {
+    display: grid;
+
+    grid-template-columns:
+        1.5fr 1fr;
+
+    gap: 30px;
+}
+
+.notice-item {
+    display: grid;
+
+    grid-template-columns:
+        65px 1fr 30px;
+
+    gap: 18px;
+
+    align-items: center;
+
+    padding: 20px 0;
+
+    border-bottom: 1px solid #eee;
+}
+
+.date-box {
+    background: var(--primary);
+
+    color: white;
+
+    text-align: center;
+
+    padding: 8px;
+}
+
+.date-box strong {
+    display: block;
+
+    font-size: 22px;
+
+    line-height: 1;
+}
+
+.date-box span {
+    font-size: 10px;
+}
+
+.notice-category {
+    font-size: 9px;
+
+    font-weight: 700;
+
+    color: var(--secondary);
+}
+
+.notice-item h3 {
+    font-size: 15px;
+    color: var(--dark);
+}
+
+.notice-item p {
+    font-size: 11px;
+}
+
+.notice-item > a {
+    color: var(--secondary);
+}
+
+.events-box {
+    background: var(--light);
+
+    padding: 30px;
+}
+
+.events-box > h3 {
+    color: var(--dark);
+
+    margin-bottom: 15px;
+}
+
+.event {
+    display: flex;
+
+    gap: 15px;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.event-date {
+    background: var(--secondary);
+
+    color: white;
+
+    min-width: 50px;
+    height: 55px;
+
+    text-align: center;
+
+    padding: 5px;
+}
+
+.event-date strong {
+    display: block;
+
+    line-height: 1;
+
+    font-size: 21px;
+}
+
+.event-date span {
+    font-size: 9px;
+}
+
+.event h4 {
+    color: var(--dark);
+    font-size: 13px;
+}
+
+.event p {
+    font-size: 10px;
+}
+
+
+@media(max-width: 768px) {
+
+    .notice-grid {
+        grid-template-columns: 1fr;
+    }
+}

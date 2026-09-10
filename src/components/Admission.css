@@ -1,0 +1,65 @@
+.admission {
+    background:
+        linear-gradient(
+            100deg,
+            var(--secondary),
+            #f07a38
+        );
+
+    color: white;
+
+    padding: 60px 0;
+}
+
+.admission-content {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.admission-content > div span {
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    font-weight: 600;
+}
+
+.admission h2 {
+    font-size: 34px;
+
+    line-height: 1.2;
+
+    margin: 5px 0;
+}
+
+.admission p {
+    font-size: 14px;
+    opacity: .9;
+}
+
+.admission-btn {
+    background: white;
+
+    color: var(--secondary);
+
+    padding: 14px 25px;
+}
+
+.admission-btn:hover {
+    transform: translateY(-3px);
+}
+
+
+@media(max-width: 768px) {
+
+    .admission-content {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 25px;
+    }
+}

@@ -1,0 +1,193 @@
+
+.footer {
+    background: var(--dark-blue);
+    color: white;
+}
+
+.footer-grid {
+    padding: 70px 0;
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr 1.3fr;
+
+    gap: 45px;
+}
+
+.footer-logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+}
+
+.footer-logo .logo-icon {
+    width: 45px;
+    height: 45px;
+
+    font-size: 20px;
+}
+
+.footer-logo h3 {
+    font-size: 16px;
+}
+
+.footer-about > p {
+    font-size: 12px;
+
+    color: rgba(255,255,255,.7);
+
+    max-width: 350px;
+}
+
+.footer-social {
+    display: flex;
+
+    gap: 8px;
+
+    margin-top: 20px;
+}
+
+.footer-social a {
+    width: 34px;
+    height: 34px;
+
+    border: 1px solid rgba(255,255,255,.2);
+
+    border-radius: 50%;
+
+    display: grid;
+    place-items: center;
+
+    font-size: 12px;
+
+    transition: .3s;
+}
+
+.footer-social a:hover {
+    background: var(--secondary);
+    border-color: var(--secondary);
+}
+
+.footer-column h3 {
+    font-size: 15px;
+
+    margin-bottom: 18px;
+
+    color: white;
+}
+
+.footer-column a {
+    display: block;
+
+    color: rgba(255,255,255,.7);
+
+    font-size: 12px;
+
+    margin-bottom: 9px;
+
+    transition: .3s;
+}
+
+.footer-column a:hover {
+    color: var(--primary);
+    padding-left: 5px;
+}
+
+.footer-column p {
+    color: rgba(255,255,255,.7);
+
+    font-size: 12px;
+
+    margin-bottom: 12px;
+}
+
+.footer-column p i {
+    width: 20px;
+    color: var(--primary);
+}
+
+.footer-bottom {
+    border-top:
+        1px solid rgba(255,255,255,.1);
+}
+
+.footer-bottom .container {
+    min-height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.footer-bottom p {
+    font-size: 10px;
+
+    color: rgba(255,255,255,.6);
+}
+
+.back-to-top {
+    position: fixed;
+
+    bottom: 25px;
+    right: 25px;
+
+    width: 42px;
+    height: 42px;
+
+    background: var(--secondary);
+
+    color: white;
+
+    border: none;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: .3s;
+
+    z-index: 999;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+@media(max-width: 992px) {
+
+    .footer-grid {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+}
+
+
+@media(max-width: 500px) {
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom .container {
+        flex-direction: column;
+
+        justify-content: center;
+
+        gap: 5px;
+
+        padding: 12px;
+    }
+}
+
