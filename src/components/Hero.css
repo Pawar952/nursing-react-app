@@ -1,0 +1,188 @@
+.hero {
+    height: 610px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-slider {
+    height: 100%;
+}
+
+.hero-slide {
+    position: absolute;
+    inset: 0;
+
+    background-size: cover;
+    background-position: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity .8s ease;
+}
+
+.hero-slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hero-content {
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    color: white;
+
+    max-width: 1200px;
+}
+
+.hero-small {
+    font-size: 14px;
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    color: var(--primary);
+
+    margin-bottom: 10px;
+}
+
+.hero-content h2 {
+    font-size: clamp(38px, 6vw, 68px);
+
+    line-height: 1.15;
+
+    max-width: 750px;
+
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    max-width: 650px;
+
+    font-size: 18px;
+
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.slider-btn {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 45px;
+    height: 45px;
+
+    border: 1px solid rgba(255,255,255,.5);
+
+    background: rgba(0,0,0,.2);
+
+    color: white;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.slider-btn:hover {
+    background: var(--secondary);
+    border-color: var(--secondary);
+}
+
+.prev {
+    left: 25px;
+}
+
+.next {
+    right: 25px;
+}
+
+.slider-dots {
+    position: absolute;
+
+    bottom: 30px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.5);
+
+    cursor: pointer;
+}
+
+.dot.active {
+    width: 28px;
+
+    border-radius: 10px;
+
+    background: var(--primary);
+}
+
+
+@media(max-width: 992px) {
+
+    .hero {
+        height: 550px;
+    }
+}
+
+
+@media(max-width: 768px) {
+
+    .hero {
+        height: 500px;
+    }
+
+    .hero-content h2 {
+        font-size: 40px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        flex-wrap: wrap;
+    }
+
+    .slider-btn {
+        display: none;
+    }
+}
+
+
+@media(max-width: 500px) {
+
+    .hero {
+        height: 470px;
+    }
+
+    .hero-content h2 {
+        font-size: 34px;
+    }
+
+    .hero-content p {
+        font-size: 13px;
+    }
+}

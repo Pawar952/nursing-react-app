@@ -1,0 +1,540 @@
+/* =========================================
+   CONTACT SECTION
+========================================= */
+
+.contact-section {
+  position: relative;
+  padding: 100px 20px;
+  background: #f7fbfc;
+  overflow: hidden;
+}
+
+/* Decorative circles */
+
+.contact-section::before {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: rgba(37, 203, 214, 0.08);
+  top: -150px;
+  left: -120px;
+}
+
+.contact-section::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: rgba(233, 98, 22, 0.06);
+  bottom: -130px;
+  right: -100px;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.contact-container {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+
+/* =========================================
+   LEFT SIDE
+========================================= */
+
+.contact-info {
+  padding: 20px 0;
+}
+
+.contact-label {
+  display: inline-block;
+
+  color: #e96216;
+  font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 15px;
+}
+
+.contact-info h1 {
+  font-size: 48px;
+  line-height: 1.15;
+
+  color: #123b42;
+
+  margin: 0 0 20px;
+}
+
+.contact-info h1 span {
+  color: #25cbd6;
+}
+
+.contact-description {
+  max-width: 520px;
+
+  font-size: 16px;
+  line-height: 1.8;
+
+  color: #64777b;
+
+  margin-bottom: 35px;
+}
+
+
+/* =========================================
+   CONTACT DETAILS
+========================================= */
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.contact-icon {
+  width: 52px;
+  height: 52px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: linear-gradient(
+    135deg,
+    #25cbd6,
+    #1db6c1
+  );
+
+  color: white;
+
+  font-size: 19px;
+
+  box-shadow:
+    0 10px 25px rgba(37, 203, 214, 0.22);
+
+  transition: 0.3s ease;
+}
+
+.contact-item:hover .contact-icon {
+  transform: translateY(-5px) rotate(5deg);
+}
+
+.contact-item h3 {
+  margin: 0 0 6px;
+
+  color: #123b42;
+
+  font-size: 17px;
+}
+
+.contact-item p,
+.contact-item a {
+  display: block;
+
+  margin: 0;
+
+  color: #687b7f;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  color: #25bfc9;
+}
+
+
+/* =========================================
+   SOCIAL
+========================================= */
+
+.contact-social {
+  margin-top: 35px;
+}
+
+.contact-social h3 {
+  color: #123b42;
+  font-size: 16px;
+
+  margin-bottom: 14px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons a {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: white;
+
+  color: #25bfc9;
+
+  text-decoration: none;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+  transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: #25cbd6;
+  color: white;
+
+  transform: translateY(-5px);
+}
+
+
+/* =========================================
+   FORM BOX
+========================================= */
+
+.contact-form-box {
+  background: white;
+
+  padding: 45px;
+
+  border-radius: 25px;
+
+  box-shadow:
+    0 20px 60px rgba(18, 59, 66, 0.12);
+
+  border: 1px solid rgba(37, 203, 214, 0.12);
+}
+
+.form-heading span {
+  color: #e96216;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 1.8px;
+}
+
+.form-heading h2 {
+  margin: 8px 0 8px;
+
+  color: #123b42;
+
+  font-size: 32px;
+}
+
+.form-heading h2 strong {
+  color: #25cbd6;
+}
+
+.form-heading p {
+  color: #718387;
+
+  font-size: 14px;
+
+  margin-bottom: 28px;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+form {
+  width: 100%;
+}
+
+.form-row {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 18px;
+}
+
+.input-group {
+  margin-bottom: 18px;
+}
+
+.input-group label {
+  display: block;
+
+  color: #244b51;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  margin-bottom: 7px;
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+
+  min-height: 52px;
+
+  padding: 0 15px;
+
+  background: #f7fbfc;
+
+  border: 1px solid #e4edef;
+
+  border-radius: 12px;
+
+  transition: 0.3s ease;
+}
+
+.input-box i {
+  color: #25bfc9;
+
+  margin-right: 11px;
+
+  font-size: 15px;
+}
+
+.input-box input,
+.input-box textarea {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #23464c;
+
+  font-size: 14px;
+
+  font-family: inherit;
+}
+
+.input-box input::placeholder,
+.input-box textarea::placeholder {
+  color: #a3b2b5;
+}
+
+.input-box:focus-within {
+  border-color: #25cbd6;
+
+  background: white;
+
+  box-shadow:
+    0 0 0 4px rgba(37, 203, 214, 0.08);
+}
+
+
+/* =========================================
+   TEXTAREA
+========================================= */
+
+.textarea-box {
+  align-items: flex-start;
+
+  padding-top: 15px;
+}
+
+.textarea-box textarea {
+  resize: vertical;
+
+  min-height: 110px;
+}
+
+
+/* =========================================
+   SEND BUTTON
+========================================= */
+
+.send-btn {
+  width: 100%;
+
+  border: none;
+
+  padding: 15px 25px;
+
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #e96216,
+    #f47b2c
+  );
+
+  color: white;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  box-shadow:
+    0 10px 25px rgba(233, 98, 22, 0.22);
+
+  transition: 0.3s ease;
+}
+
+.send-btn:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 30px rgba(233, 98, 22, 0.28);
+}
+
+.send-btn i {
+  transition: 0.3s ease;
+}
+
+.send-btn:hover i {
+  transform: translateX(5px);
+}
+
+
+/* =========================================
+   SECURITY TEXT
+========================================= */
+
+.form-security {
+  margin: 15px 0 0;
+
+  text-align: center;
+
+  color: #8b9b9e;
+
+  font-size: 12px;
+}
+
+.form-security i {
+  color: #25bfc9;
+
+  margin-right: 5px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .contact-container {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+
+    max-width: 700px;
+  }
+
+  .contact-info h1 {
+    font-size: 42px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .contact-section {
+    padding: 70px 15px;
+  }
+
+  .contact-info h1 {
+    font-size: 34px;
+  }
+
+  .contact-description {
+    font-size: 14px;
+  }
+
+  .contact-form-box {
+    padding: 28px 20px;
+
+    border-radius: 20px;
+  }
+
+  .form-heading h2 {
+    font-size: 27px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+
+    gap: 0;
+  }
+
+  .contact-item {
+    gap: 13px;
+  }
+
+  .contact-icon {
+    width: 45px;
+    height: 45px;
+
+    font-size: 16px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+  .contact-info h1 {
+    font-size: 30px;
+  }
+
+  .contact-form-box {
+    padding: 24px 16px;
+  }
+
+  .social-icons a {
+    width: 38px;
+    height: 38px;
+  }
+
+}

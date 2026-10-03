@@ -1,0 +1,731 @@
+
+/* =====================================================
+   ABOUT SECTION
+===================================================== */
+
+.about-section {
+  position: relative;
+  padding: 110px 0;
+
+  background: linear-gradient(
+    135deg,
+    #f7fdfe 0%,
+    #ffffff 50%,
+    #f8fcfc 100%
+  );
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.about-container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 25px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+
+  align-items: center;
+
+  position: relative;
+  z-index: 2;
+}
+
+
+/* =====================================================
+   BACKGROUND SHAPES
+===================================================== */
+
+.about-shape {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.shape-one {
+  width: 400px;
+  height: 400px;
+
+  background: rgba(37, 203, 214, 0.06);
+
+  top: -150px;
+  left: -150px;
+}
+
+.shape-two {
+  width: 350px;
+  height: 350px;
+
+  background: rgba(233, 98, 22, 0.05);
+
+  bottom: -150px;
+  right: -120px;
+}
+
+
+/* =====================================================
+   IMAGE AREA
+===================================================== */
+
+.about-image-wrapper {
+  position: relative;
+  padding: 20px;
+}
+
+
+/* Main Image */
+
+.image-frame {
+  position: relative;
+
+  height: 560px;
+
+  border-radius: 30px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.13);
+
+  transition: all 0.5s ease;
+}
+
+
+.image-frame:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 35px 75px rgba(0, 0, 0, 0.18);
+}
+
+
+/* Image */
+
+.image-frame img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.8s ease;
+}
+
+
+.image-frame:hover img {
+  transform: scale(1.08);
+}
+
+
+/* Image Overlay */
+
+.image-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.25),
+    transparent 55%
+  );
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   EXPERIENCE CARD
+===================================================== */
+
+.experience-card {
+  position: absolute;
+
+  left: -5px;
+  bottom: 45px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 18px 25px;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  backdrop-filter: blur(12px);
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.12);
+
+  transition: all 0.4s ease;
+}
+
+
+.experience-card:hover {
+  transform: translateY(-8px) scale(1.03);
+}
+
+
+/* Award Icon */
+
+.experience-icon {
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 15px;
+
+  background: linear-gradient(
+    135deg,
+    #25cbd6,
+    #19aeb9
+  );
+
+  color: white;
+
+  font-size: 22px;
+}
+
+
+.experience-card strong {
+  display: block;
+
+  font-size: 32px;
+
+  line-height: 1;
+
+  color: #e96216;
+
+  font-weight: 800;
+}
+
+
+.experience-card span {
+  display: block;
+
+  margin-top: 5px;
+
+  font-size: 13px;
+
+  color: #555;
+
+  font-weight: 600;
+}
+
+
+/* =====================================================
+   FLOATING BADGE
+===================================================== */
+
+.floating-badge {
+  position: absolute;
+
+  right: -10px;
+  top: 55px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 14px 18px;
+
+  background: white;
+
+  border-radius: 50px;
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.12);
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  color: #333;
+
+  animation: floatingBadge 3s ease-in-out infinite;
+}
+
+
+.floating-badge i {
+  width: 35px;
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(37, 203, 214, 0.12);
+
+  color: #25aeb9;
+}
+
+
+@keyframes floatingBadge {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.about-content {
+  max-width: 650px;
+}
+
+
+/* Section Label */
+
+.section-label {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  color: #e96216;
+
+  letter-spacing: 1.5px;
+
+  margin-bottom: 18px;
+}
+
+
+.label-line {
+  width: 35px;
+  height: 3px;
+
+  background: #25cbd6;
+
+  border-radius: 10px;
+}
+
+
+/* Heading */
+
+.about-content h2 {
+  margin: 0 0 20px;
+
+  font-size: clamp(38px, 4vw, 58px);
+
+  line-height: 1.1;
+
+  color: #16363b;
+
+  font-weight: 800;
+
+  letter-spacing: -1.5px;
+}
+
+
+.about-content h2 span {
+  color: #25bfc9;
+}
+
+
+/* Lead */
+
+.about-content .lead {
+  font-size: 19px;
+
+  line-height: 1.7;
+
+  color: #40565a;
+
+  margin-bottom: 18px;
+
+  font-weight: 500;
+}
+
+
+/* Paragraph */
+
+.about-content > p:not(.lead) {
+  font-size: 15.5px;
+
+  line-height: 1.8;
+
+  color: #68777a;
+
+  margin-bottom: 15px;
+}
+
+
+/* =====================================================
+   FEATURES
+===================================================== */
+
+.about-features {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 14px;
+
+  margin-top: 28px;
+}
+
+
+/* Feature Card */
+
+.feature-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 14px;
+
+  background: white;
+
+  border: 1px solid rgba(37, 203, 214, 0.12);
+
+  border-radius: 14px;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+
+.feature-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(37, 203, 214, 0.4);
+
+  box-shadow:
+    0 15px 30px rgba(37, 203, 214, 0.12);
+}
+
+
+/* Feature Icon */
+
+.feature-icon {
+  min-width: 45px;
+
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: rgba(37, 203, 214, 0.1);
+
+  color: #20aeb9;
+
+  font-size: 18px;
+
+  transition: all 0.3s ease;
+}
+
+
+.feature-card:hover .feature-icon {
+  background: #25cbd6;
+
+  color: white;
+
+  transform: rotate(5deg) scale(1.05);
+}
+
+
+/* Feature Heading */
+
+.feature-card h4 {
+  margin: 0 0 4px;
+
+  font-size: 14px;
+
+  color: #253d40;
+
+  font-weight: 700;
+}
+
+
+/* Feature Text */
+
+.feature-card p {
+  margin: 0;
+
+  font-size: 12px;
+
+  color: #879396;
+}
+
+
+/* =====================================================
+   BOTTOM
+===================================================== */
+
+.about-bottom {
+  display: flex;
+
+  align-items: center;
+
+  gap: 25px;
+
+  margin-top: 30px;
+
+  flex-wrap: wrap;
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.about-btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 14px 23px;
+
+  text-decoration: none;
+
+  color: white;
+
+  background: linear-gradient(
+    135deg,
+    #e96216,
+    #f47b2c
+  );
+
+  border-radius: 10px;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  box-shadow:
+    0 10px 25px rgba(233, 98, 22, 0.22);
+
+  transition: all 0.35s ease;
+}
+
+
+.about-btn i {
+  transition: transform 0.3s ease;
+}
+
+
+.about-btn:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 15px 35px rgba(233, 98, 22, 0.3);
+}
+
+
+.about-btn:hover i {
+  transform: translateX(6px);
+}
+
+
+/* =====================================================
+   TRUST TEXT
+===================================================== */
+
+.trust-text {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: #68777a;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+
+.trust-text i {
+  color: #25cbd6;
+
+  font-size: 16px;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+  .about-container {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+  .about-content {
+    max-width: 100%;
+  }
+
+  .about-image-wrapper {
+    max-width: 700px;
+
+    width: 100%;
+
+    margin: auto;
+  }
+
+  .image-frame {
+    height: 500px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .about-section {
+    padding: 75px 0;
+  }
+
+
+  .about-container {
+    padding: 0 18px;
+
+    gap: 45px;
+  }
+
+
+  .about-image-wrapper {
+    padding: 10px;
+  }
+
+
+  .image-frame {
+    height: 390px;
+
+    border-radius: 22px;
+  }
+
+
+  .experience-card {
+    left: -2px;
+
+    bottom: 25px;
+
+    padding: 13px 17px;
+  }
+
+
+  .experience-icon {
+    width: 45px;
+
+    height: 45px;
+
+    font-size: 18px;
+  }
+
+
+  .experience-card strong {
+    font-size: 25px;
+  }
+
+
+  .experience-card span {
+    font-size: 11px;
+  }
+
+
+  .floating-badge {
+    right: -2px;
+
+    top: 25px;
+
+    padding: 10px 13px;
+
+    font-size: 10px;
+  }
+
+
+  .floating-badge i {
+    width: 30px;
+
+    height: 30px;
+  }
+
+
+  .about-content h2 {
+    font-size: 36px;
+  }
+
+
+  .about-content .lead {
+    font-size: 16px;
+  }
+
+
+  .about-content > p:not(.lead) {
+    font-size: 14px;
+  }
+
+
+  .about-features {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+
+  .about-bottom {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 18px;
+  }
+
+
+  .about-btn {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+
+  .trust-text {
+    font-size: 11px;
+  }
+
+}
+

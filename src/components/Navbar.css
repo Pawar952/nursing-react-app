@@ -1,0 +1,715 @@
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  width: 100%;
+  height: 78px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: #25cbd6;
+
+  backdrop-filter: blur(15px);
+
+  border-bottom: 1px solid rgba(37, 203, 214, 0.15);
+
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   NAV CONTAINER
+========================= */
+
+.nav-container {
+  max-width: 1400px;
+  height: 100%;
+
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 25px;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+.nav-menu {
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+
+  gap: 4px;
+
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu > li {
+  position: relative;
+}
+
+
+/* =========================
+   NAV LINKS - DESKTOP
+========================= */
+
+.nav-menu a,
+.dropdown-btn {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 10px 12px;
+
+  border: none;
+
+  background: none;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: #f7ffff;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+
+/* =========================
+   DESKTOP HOVER
+========================= */
+
+.nav-menu a:hover,
+.dropdown-btn:hover {
+  color: #e96216;
+}
+
+
+/* =========================
+   DESKTOP ACTIVE
+========================= */
+
+.nav-menu a.active {
+  color: #e96216;
+}
+
+
+/* =========================
+   ACTIVE UNDERLINE
+========================= */
+
+.nav-menu > li > a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 2px;
+
+  width: 0;
+  height: 3px;
+
+  border-radius: 10px;
+
+  background: #e96216;
+
+  transform: translateX(-50%);
+
+  transition: 0.3s;
+}
+
+.nav-menu > li > a:hover::after,
+.nav-menu > li > a.active::after {
+  width: 60%;
+}
+
+
+/* =========================
+   DROPDOWN BUTTON
+========================= */
+
+.dropdown-btn i {
+  font-size: 10px;
+  transition: 0.3s;
+}
+
+.dropdown:hover .dropdown-btn i {
+  transform: rotate(180deg);
+}
+
+
+/* =========================
+   DROPDOWN MENU
+========================= */
+
+.dropdown-menu {
+  position: absolute;
+
+  top: 48px;
+  left: 0;
+
+  width: 245px;
+
+  padding: 10px;
+  margin: 0;
+
+  list-style: none;
+
+  background: white;
+
+  border-radius: 15px;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.14);
+
+  border-top: 3px solid #25cbd6;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(10px);
+
+  transition: 0.3s;
+}
+
+
+/* =========================
+   DESKTOP DROPDOWN
+========================= */
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+
+/* =========================
+   DROPDOWN ITEMS
+========================= */
+
+.dropdown-menu li {
+  width: 100%;
+}
+
+.dropdown-menu a {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 11px 13px;
+
+  border-radius: 9px;
+
+  font-size: 13px;
+
+  color: #444;
+}
+
+.dropdown-menu a i {
+  width: 20px;
+  color: #25cbd6;
+}
+
+.dropdown-menu a:hover {
+  background: rgba(37, 203, 214, 0.1);
+
+  color: #e96216;
+
+  padding-left: 18px;
+}
+
+
+/* =========================
+   APPLY BUTTON
+========================= */
+
+.nav-apply {
+  margin-left: 8px;
+
+  padding: 12px 18px !important;
+
+  color: white !important;
+
+  border-radius: 30px;
+
+  background: #e96216 !important;
+
+  transition: 0.3s !important;
+}
+
+
+/* Remove underline */
+
+.nav-apply::after {
+  display: none !important;
+}
+
+
+/* Desktop Apply hover */
+
+.nav-apply:hover {
+  color: white !important;
+
+  background: #e96216 !important;
+
+  transform: translateY(-2px);
+}
+
+
+/* Apply icon */
+
+.nav-apply i {
+  transition: 0.3s;
+}
+
+.nav-apply:hover i {
+  transform: translateX(4px);
+}
+
+
+/* =========================
+   MOBILE BUTTON
+========================= */
+
+.menu-btn {
+  display: none;
+
+  width: 45px;
+  height: 45px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: #25cbd6;
+
+  color: white;
+
+  font-size: 20px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.menu-btn:hover {
+  background: #e96216;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+
+  .nav-menu {
+    gap: 0;
+  }
+
+  .nav-menu a,
+  .dropdown-btn {
+    padding: 9px 8px;
+
+    font-size: 13px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+  /* =========================
+     NAVBAR
+  ========================= */
+
+  .navbar {
+    height: 70px;
+  }
+
+  .nav-container {
+    padding: 0 18px;
+  }
+
+
+  /* =========================
+     MOBILE MENU BUTTON
+  ========================= */
+
+  .menu-btn {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #25cbd6;
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+  }
+
+  .menu-btn:hover {
+    background: #e96216;
+  }
+
+
+  /* =========================
+     MOBILE NAV MENU
+  ========================= */
+
+  .nav-menu {
+    position: absolute;
+
+    top: 70px;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    background: white;
+
+    padding: 15px;
+
+    box-sizing: border-box;
+
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(-10px);
+
+    transition: 0.3s;
+  }
+
+
+  /* =========================
+     OPEN MOBILE MENU
+  ========================= */
+
+  .nav-menu.show {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+  }
+
+
+  /* =========================
+     MOBILE MENU ITEMS
+  ========================= */
+
+  .nav-menu > li {
+    width: 100%;
+  }
+
+
+  /* Normal mobile links */
+
+  .nav-menu > li > a:not(.nav-apply),
+  .dropdown-btn {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    padding: 13px 15px;
+
+    border-radius: 10px;
+
+    box-sizing: border-box;
+
+    color: #163b53 !important;
+
+    background: transparent;
+
+    font-size: 14px;
+
+    font-weight: 600;
+  }
+
+
+  /* =========================
+     MOBILE HOVER
+  ========================= */
+
+  .nav-menu > li > a:not(.nav-apply):hover,
+  .dropdown-btn:hover {
+
+    background: rgba(37, 203, 214, 0.08);
+
+    color: #e96216 !important;
+  }
+
+
+  /* =========================
+     MOBILE ACTIVE
+  ========================= */
+
+  .nav-menu > li > a:not(.nav-apply).active {
+
+    color: #e96216 !important;
+
+    background: rgba(233, 98, 22, 0.08);
+  }
+
+
+  /* =========================
+     REMOVE DESKTOP UNDERLINE
+  ========================= */
+
+  .nav-menu > li > a::after {
+    display: none;
+  }
+
+
+  /* =========================
+     MOBILE DROPDOWN
+  ========================= */
+
+  .dropdown-menu {
+
+    position: static;
+
+    width: 100%;
+
+    display: none;
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: none;
+
+    box-shadow: none;
+
+    border-top: none;
+
+    background: #f7ffff;
+
+    border-radius: 10px;
+
+    padding: 5px;
+  }
+
+
+  /* Disable desktop hover dropdown */
+
+  .dropdown:hover .dropdown-menu {
+    display: none;
+  }
+
+
+  /* Show dropdown when opened */
+
+  .dropdown.dropdown-open .dropdown-menu {
+    display: block;
+  }
+
+
+  /* =========================
+     MOBILE DROPDOWN LINKS
+  ========================= */
+
+  .dropdown-menu a {
+
+    width: 100%;
+
+    padding: 11px 20px;
+
+    color: #163b53 !important;
+
+    background: transparent;
+
+    font-size: 13px;
+  }
+
+
+  .dropdown-menu a:hover {
+
+    background: rgba(37, 203, 214, 0.1);
+
+    color: #e96216 !important;
+  }
+
+
+  /* Active dropdown item */
+
+  .dropdown-menu a.active {
+
+    color: #e96216 !important;
+
+    background: rgba(233, 98, 22, 0.08);
+  }
+
+
+  /* =========================
+     APPLY BUTTON - MOBILE
+     
+     NO ACTIVE/HOVER EFFECT
+  ========================= */
+
+  .nav-menu > li > a.nav-apply {
+
+    display: flex !important;
+
+    align-items: center;
+
+    justify-content: center !important;
+
+    width: 100% !important;
+
+    margin: 10px 0 0;
+
+    padding: 12px 18px !important;
+
+    color: white !important;
+
+    background: #e96216 !important;
+
+    border-radius: 10px;
+
+    transform: none !important;
+
+    box-shadow: none !important;
+  }
+
+
+  /* Keep Apply button orange on hover */
+
+  .nav-menu > li > a.nav-apply:hover {
+
+    color: white !important;
+
+    background: #e96216 !important;
+
+    transform: none !important;
+
+    box-shadow: none !important;
+  }
+
+
+  /* Keep Apply button orange when active */
+
+  .nav-menu > li > a.nav-apply.active {
+
+    color: white !important;
+
+    background: #e96216 !important;
+
+    transform: none !important;
+
+    box-shadow: none !important;
+  }
+
+
+  /* Apply button icon */
+
+  .nav-menu > li > a.nav-apply i {
+    color: white !important;
+  }
+
+
+  .nav-menu > li > a.nav-apply:hover i {
+    transform: translateX(4px);
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+  .nav-container {
+    padding: 0 12px;
+  }
+
+
+  .menu-btn {
+    width: 42px;
+
+    height: 42px;
+
+    font-size: 18px;
+  }
+
+
+  .nav-menu {
+    padding: 12px;
+  }
+
+
+  .nav-menu > li > a:not(.nav-apply),
+  .dropdown-btn {
+
+    padding: 12px 14px;
+
+    font-size: 14px;
+  }
+
+
+  .dropdown-menu a {
+
+    padding: 10px 18px;
+
+    font-size: 13px;
+  }
+
+
+  /* Apply button stays unchanged */
+
+  .nav-menu > li > a.nav-apply {
+
+    padding: 12px 18px !important;
+
+    color: white !important;
+
+    background: #e96216 !important;
+  }
+}

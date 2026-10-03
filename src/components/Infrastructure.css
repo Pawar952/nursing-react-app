@@ -1,0 +1,742 @@
+
+/* =========================================================
+   INFRASTRUCTURE SECTION
+========================================================= */
+
+.infrastructure {
+  position: relative;
+  padding: 100px 20px;
+  background: #f7fbfc;
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   BACKGROUND DECORATION
+========================================================= */
+
+.infrastructure::before {
+  content: "";
+  position: absolute;
+
+  width: 450px;
+  height: 450px;
+
+  border-radius: 50%;
+
+  background: rgba(37, 203, 214, 0.06);
+
+  top: -220px;
+  right: -150px;
+
+  pointer-events: none;
+}
+
+.infrastructure::after {
+  content: "";
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  border-radius: 50%;
+
+  background: rgba(233, 98, 22, 0.045);
+
+  bottom: -160px;
+  left: -120px;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.infrastructure .container {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1250px;
+  margin: auto;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.infrastructure .section-heading {
+  max-width: 800px;
+
+  margin: 0 auto 55px;
+
+  text-align: center;
+}
+
+
+/* Small Label */
+
+.infrastructure .section-label {
+  display: inline-block;
+
+  margin-bottom: 14px;
+
+  color: #e96216;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+
+/* Main Heading */
+
+.infrastructure .section-heading h2 {
+  margin: 0;
+
+  color: #183238;
+
+  font-size: clamp(32px, 4vw, 48px);
+
+  font-weight: 800;
+
+  line-height: 1.15;
+}
+
+
+/* Colored Word */
+
+.infrastructure .section-heading h2 span {
+  color: #25aeb9;
+}
+
+
+/* Description */
+
+.infrastructure .section-heading p {
+  max-width: 680px;
+
+  margin: 18px auto 0;
+
+  color: #687a80;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   FACILITY GRID
+========================================================= */
+
+.facility-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 24px;
+}
+
+
+/* =========================================================
+   FACILITY CARD
+========================================================= */
+
+.facility-card {
+  position: relative;
+
+  height: 400px;
+
+  border-radius: 22px;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  background: #17363d;
+
+  box-shadow:
+    0 12px 35px rgba(20, 65, 75, 0.10);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+
+/* Card Hover */
+
+.facility-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 25px 55px rgba(20, 65, 75, 0.20);
+}
+
+
+/* =========================================================
+   CARD IMAGE
+========================================================= */
+
+.facility-card img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition:
+    transform 0.7s ease;
+}
+
+
+/* Image Zoom */
+
+.facility-card:hover img {
+  transform: scale(1.08);
+}
+
+
+/* =========================================================
+   DARK OVERLAY
+========================================================= */
+
+.facility-dark {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(7, 29, 34, 0.05) 10%,
+      rgba(7, 29, 34, 0.15) 35%,
+      rgba(7, 29, 34, 0.88) 100%
+    );
+
+  transition:
+    background 0.4s ease;
+}
+
+
+/* Stronger Overlay on Hover */
+
+.facility-card:hover .facility-dark {
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(7, 29, 34, 0.10),
+      rgba(7, 29, 34, 0.25),
+      rgba(7, 29, 34, 0.95)
+    );
+}
+
+
+/* =========================================================
+   CARD NUMBER
+========================================================= */
+
+.facility-number {
+  position: absolute;
+
+  top: 22px;
+  right: 24px;
+
+  color: rgba(255, 255, 255, 0.75);
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   FACILITY ICON
+========================================================= */
+
+.facility-icon {
+  position: absolute;
+
+  top: 25px;
+  left: 25px;
+
+  width: 58px;
+  height: 58px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.16);
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  backdrop-filter: blur(10px);
+
+  color: #ffffff;
+
+  font-size: 22px;
+
+  transition:
+    all 0.4s ease;
+}
+
+
+/* Icon Hover */
+
+.facility-card:hover .facility-icon {
+  background: #25cbd6;
+
+  border-color: #25cbd6;
+
+  transform: rotate(8deg) scale(1.08);
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.facility-content {
+  position: absolute;
+
+  left: 28px;
+  right: 28px;
+  bottom: 27px;
+
+  z-index: 3;
+}
+
+
+/* Title */
+
+.facility-content h3 {
+  margin: 0 0 10px;
+
+  color: #ffffff;
+
+  font-size: 25px;
+
+  font-weight: 750;
+
+  line-height: 1.2;
+
+  transition:
+    transform 0.4s ease;
+}
+
+
+/* Description */
+
+.facility-content p {
+  max-width: 520px;
+
+  margin: 0 0 17px;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 14px;
+
+  line-height: 1.65;
+
+  opacity: 0;
+
+  transform: translateY(15px);
+
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+}
+
+
+/* Show Description on Hover */
+
+.facility-card:hover .facility-content p {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   EXPLORE LINK
+========================================================= */
+
+.facility-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.3px;
+
+  transition:
+    gap 0.3s ease,
+    color 0.3s ease;
+}
+
+
+/* Arrow */
+
+.facility-link i {
+  color: #25cbd6;
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+/* Link Hover */
+
+.facility-card:hover .facility-link {
+  gap: 14px;
+}
+
+.facility-card:hover .facility-link i {
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   BOTTOM INFORMATION
+========================================================= */
+
+.infrastructure-bottom {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-top: 45px;
+
+  padding: 25px 30px;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(37, 203, 214, 0.15);
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 10px 30px rgba(20, 65, 75, 0.06);
+}
+
+
+/* Info */
+
+.infrastructure-info {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+}
+
+
+/* Info Icon */
+
+.info-icon {
+  width: 58px;
+  height: 58px;
+
+  min-width: 58px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: rgba(37, 203, 214, 0.10);
+
+  color: #25aeb9;
+
+  font-size: 23px;
+}
+
+
+/* Info Heading */
+
+.infrastructure-info h3 {
+  margin: 0 0 5px;
+
+  color: #20373d;
+
+  font-size: 18px;
+
+  font-weight: 750;
+}
+
+
+/* Info Paragraph */
+
+.infrastructure-info p {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: #718187;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   CAMPUS BUTTON
+========================================================= */
+
+.info-button a {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 13px 21px;
+
+  border-radius: 8px;
+
+  background: #e96216;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.info-button a:hover {
+  background: #d8540e;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(233, 98, 22, 0.25);
+}
+
+
+.info-button i {
+  transition:
+    transform 0.3s ease;
+}
+
+
+.info-button a:hover i {
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .infrastructure {
+    padding: 80px 20px;
+  }
+
+
+  .facility-grid {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+  }
+
+
+  .facility-card {
+    height: 360px;
+  }
+
+
+  .facility-content {
+    left: 22px;
+    right: 22px;
+    bottom: 22px;
+  }
+
+
+  .facility-content h3 {
+    font-size: 21px;
+  }
+
+
+  .facility-content p {
+    font-size: 13px;
+  }
+
+
+  .infrastructure-bottom {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .infrastructure {
+    padding: 65px 15px;
+  }
+
+
+  .infrastructure .section-heading {
+    margin-bottom: 35px;
+  }
+
+
+  .infrastructure .section-heading h2 {
+    font-size: 31px;
+  }
+
+
+  .infrastructure .section-heading p {
+    font-size: 14px;
+  }
+
+
+  .facility-grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+
+  .facility-card {
+    height: 360px;
+
+    border-radius: 17px;
+  }
+
+
+  .facility-icon {
+    width: 52px;
+    height: 52px;
+
+    top: 20px;
+    left: 20px;
+
+    font-size: 20px;
+  }
+
+
+  .facility-number {
+    top: 21px;
+    right: 20px;
+  }
+
+
+  .facility-content {
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+  }
+
+
+  .facility-content h3 {
+    font-size: 22px;
+  }
+
+
+  /* Always show description on mobile */
+
+  .facility-content p {
+    opacity: 1;
+
+    transform: translateY(0);
+
+    font-size: 13px;
+
+    margin-bottom: 14px;
+  }
+
+
+  .infrastructure-bottom {
+    margin-top: 30px;
+
+    padding: 20px;
+
+    gap: 22px;
+  }
+
+
+  .infrastructure-info {
+    align-items: flex-start;
+
+    gap: 13px;
+  }
+
+
+  .info-icon {
+    width: 48px;
+    height: 48px;
+
+    min-width: 48px;
+
+    font-size: 19px;
+  }
+
+
+  .infrastructure-info h3 {
+    font-size: 16px;
+  }
+
+
+  .infrastructure-info p {
+    font-size: 13px;
+  }
+
+
+  .info-button {
+    width: 100%;
+  }
+
+
+  .info-button a {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+}
+

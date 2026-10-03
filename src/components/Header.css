@@ -1,0 +1,245 @@
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+  width: 100%;
+  background: #ffffff;
+  /* border-top: 3px solid #25cbd6;
+  border-bottom: 1px solid rgba(37, 203, 214, 0.18); */
+  position: relative;
+  z-index: 999;
+
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =========================================
+   HEADER CONTENT
+========================================= */
+
+.header-content {
+  width: 100%;
+  min-height: 140px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 12px 35px;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   LOGOS
+========================================= */
+
+.header-logo {
+  width: 118px;
+  height: 118px;
+
+  background: #ffffff;
+
+  border-radius: 12px;
+   
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  flex-shrink: 0;
+
+  border: 1px solid rgba(37, 203, 214, 0.15);
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Logo Image */
+
+.header-logo img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  display: block;
+
+}
+
+
+/* =========================================
+   CENTER CONTENT
+========================================= */
+
+.header-center {
+  flex: 1;
+
+  text-align: center;
+
+  padding: 0 25px;
+}
+
+
+/* =========================================
+   COLLEGE NAME
+========================================= */
+
+.header-center h1 {
+  margin: 0 0 8px;
+
+  color: #172033;
+
+  font-size: 34px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  line-height: 1.2;
+}
+
+
+/* =========================================
+   ADDRESS
+========================================= */
+
+.header-center p {
+  margin: 0;
+
+  color: #4b5563;
+
+  font-size: 17px;
+  font-weight: 400;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 900px) {
+
+  .header-content {
+    min-height: 120px;
+    padding: 10px 20px;
+  }
+
+  .header-logo {
+    width: 90px;
+    height: 90px;
+  }
+
+  .header-center h1 {
+    font-size: 25px;
+  }
+
+  .header-center p {
+    font-size: 14px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .header-content {
+    min-height: auto;
+
+    padding: 15px;
+
+    display: grid;
+
+    grid-template-columns: 70px 1fr 70px;
+
+    gap: 10px;
+  }
+
+  .header-logo {
+    width: 65px;
+    height: 65px;
+
+    border-radius: 8px;
+  }
+
+  .header-center {
+    padding: 0 5px;
+  }
+
+  .header-center h1 {
+    font-size: 17px;
+
+    letter-spacing: 0.5px;
+
+    margin-bottom: 5px;
+  }
+
+  .header-center p {
+    font-size: 9px;
+
+    line-height: 1.3;
+  }
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+  .header-content {
+    grid-template-columns: 55px 1fr 55px;
+
+    gap: 7px;
+
+    padding: 10px;
+  }
+
+  .header-logo {
+    width: 52px;
+    height: 52px;
+  }
+
+  .header-center h1 {
+    font-size: 14px;
+  }
+
+  .header-center p {
+    font-size: 8px;
+  }
+}
+
+/* =========================================
+   LOGO HOVER ANIMATION
+========================================= */
+
+.header-logo {
+  transition: transform 0.4s ease,
+              box-shadow 0.4s ease,
+              border-color 0.4s ease;
+}
+
+/* Logo box hover */
+.header-logo:hover {
+  transform: scale(1.08) rotate(2deg);
+  border-color: #25cbd6;
+  box-shadow: 0 10px 25px rgba(37, 203, 214, 0.30);
+}
+
+/* Logo image animation */
+.header-logo img {
+  transition: transform 0.5s ease;
+}
+
+/* Image hover */
+.header-logo:hover img {
+  transform: scale(1.08) rotate(-2deg);
+}

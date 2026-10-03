@@ -1,0 +1,164 @@
+/* =========================================================
+   PRINCIPAL MESSAGE
+   Same Design as Director Message Page
+========================================================= */
+
+.principal-message {
+  width: 100%;
+}
+
+.principal-container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 380px 1fr;
+
+  gap: 70px;
+
+  align-items: center;
+}
+
+.principal-image {
+  text-align: center;
+}
+
+.principal-image img {
+  width: 100%;
+  height: 450px;
+
+  object-fit: cover;
+
+  border-radius: 12px;
+}
+
+.principal-image h3 {
+  margin-top: 20px;
+  margin-bottom: 5px;
+
+  color: #173b40;
+
+  font-size: 20px;
+}
+
+.principal-image p {
+  margin: 0;
+
+  color: #e96216;
+
+  font-size: 15px;
+
+  font-weight: 600;
+}
+
+.principal-content h1 {
+  margin: 0;
+
+  color: #173b40;
+
+  font-size: 42px;
+
+  font-weight: 700;
+}
+
+.principal-message-line {
+  width: 70px;
+  height: 4px;
+
+  background: #25cbd6;
+
+  margin: 18px 0 30px;
+
+  border-radius: 5px;
+}
+
+.principal-content p {
+  color: #5f7074;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+
+  margin-bottom: 18px;
+}
+
+.principal-name {
+  color: #173b40;
+
+  font-size: 19px;
+
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+
+.principal-designation {
+  color: #e96216 !important;
+
+  font-size: 14px !important;
+
+  font-weight: 600;
+
+  margin: 0 !important;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .principal-container {
+    grid-template-columns: 320px 1fr;
+
+    gap: 40px;
+  }
+
+  .principal-image img {
+    height: 400px;
+  }
+
+  .principal-content h1 {
+    font-size: 36px;
+  }
+}
+
+
+@media (max-width: 700px) {
+
+  .principal-container {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+  .principal-image {
+    max-width: 450px;
+
+    margin: 0 auto;
+  }
+
+  .principal-image img {
+    height: 430px;
+  }
+
+  .principal-content h1 {
+    font-size: 32px;
+  }
+
+  .principal-content p {
+    font-size: 15px;
+  }
+}
+
+
+@media (max-width: 450px) {
+
+  .principal-image img {
+    height: 350px;
+  }
+
+  .principal-content h1 {
+    font-size: 28px;
+  }
+}

@@ -1,0 +1,70 @@
+.vision-section {
+    background: var(--light);
+    padding: 70px 0;
+}
+
+.vision-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.vision-card {
+    background: white;
+
+    padding: 35px;
+
+    text-align: center;
+
+    border-bottom: 4px solid var(--primary);
+
+    box-shadow:
+        0 5px 25px rgba(0,0,0,.05);
+}
+
+.vision-card.mission {
+    border-bottom-color: var(--secondary);
+}
+
+.vision-icon {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 18px;
+
+    border-radius: 50%;
+
+    background: rgba(37,203,214,.1);
+
+    color: var(--primary);
+
+    display: grid;
+    place-items: center;
+
+    font-size: 26px;
+}
+
+.mission .vision-icon {
+    color: var(--secondary);
+    background: rgba(233,98,22,.1);
+}
+
+.vision-card h3 {
+    color: var(--dark);
+    margin-bottom: 10px;
+}
+
+.vision-card p {
+    font-size: 13px;
+}
+
+
+@media(max-width: 768px) {
+
+    .vision-grid {
+        grid-template-columns: 1fr;
+    }
+}
